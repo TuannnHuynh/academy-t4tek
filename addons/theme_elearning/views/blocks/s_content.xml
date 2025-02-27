@@ -1,0 +1,7 @@
+<odoo>
+	​<template id="s_content" name="Content">
+		​​<section>
+	​		​​<p>Demo Block</p>
+	​	​</section>
+	​</template>
+</odoo>

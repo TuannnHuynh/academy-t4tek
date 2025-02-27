@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Định nghĩa template riêng -->
+    <template id="test_page_template" name="Home page">
+        <t t-call="website.layout">
+            <div id="wrap" style="background: #edeff0;">
+                <section class="banner-list">
+                    <div class="container-fluid px-md-0 oe_structure">
+                        <div class="banner-first">
+                            <div class="row m-0">
+                                <img class="col-12 col-md-6 p-0"
+                                    src="/theme_elearning/static/src/img/home/banner.png"
+                                    alt=""/>
+                                <div class="banner-item col-12 py-4 py-md-0 col-md-6 p-0">
+                                    <div class="content">
+                                        <h2 class="fs-1 fs-md-3">ĐỪNG BỎ LỠ ƯU ĐÃI LỚN NHẤT TRONG NĂM</h2>
+                                        <p>Giảm đến 30% học phí các khóa học khai giảng sau Tết Nguyên Đán. Số lượng chỗ học có
+                                            hạn,
+                                            thời
+                                            gian ưu đãi đến 15/1/2025 hoặc khi khóa học nhận đủ học viên tùy theo điều kiện nào
+                                            đến
+                                            trước.
+                                        </p>
+                                        <button class="btn-animate">Chọn khoá học phù hợp</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-second">
+                            <div class="row m-0">
+                                <img class="col-12 col-md-6 p-0"
+                                    src="/theme_elearning/static/src/img/home/banner-1.jpg"
+                                    alt=""/>
+                                <div class="banner-item col-12 py-4 py-md-0 col-md-6 p-0">
+                                    <div class="content">
+                                        <h2>Lộ trình học Mỹ Thuật Số - Dành cho trẻ em từ 8 - 17 tuổi</h2>
+                                        <button class="btn-animate">Xem chi tiết</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-third">
+                            <div class="row m-0">
+                                <img class="col-12 col-md-6 p-0"
+                                    src="/theme_elearning/static/src/img/home/banner-2.jpg"
+                                    alt=""/>
+                                <div class="banner-item col-12 py-4 py-md-0 col-md-6 p-0">
+                                    <div class="content">
+                                        <h2>Trở thành UX/UI Designer toàn diện tư duy và kỹ năng thiết kế</h2>
+                                        <p>Học Offline tại Sài Gòn/ Hà Nội hoặc Remote Teaching với giảng viên qua Meet</p>
+                                        <button class="btn-animate">Xem chi tiết</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-fourth">
+                            <div class="row m-0">
+                                <img class="col-12 col-md-6 p-0"
+                                    src="/theme_elearning/static/src/img/home/banner-3.jpg"
+                                    alt=""/>
+                                <div class="banner-item col-12 py-4 py-md-0 col-md-6 p-0">
+                                    <div class="content">
+                                        <h2>Trở thành Graphic Designer Toàn Diện</h2>
+                                        <p>Từ Tư Duy Hình Ảnh, Mỹ Thuật Sáng Tạo đến Thiết Kế Chuyên Sâu.</p>
+                                        <button class="btn-animate">Xem chi tiết chương trình học</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="highlight">
+                    <div class="container">
+                        <div class="row">
+                            <div class="card col-md-3">
+                                <img src="/theme_elearning/static/src/img/home/media.png"
+                                    class="card-img-top" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Mentor 1:1 dự án portfolio cá nhân</h5>
+                                    <p class="card-text">Áp dụng phương pháp giảng dạy Porfolio Mentoring. Học &amp; tương tác trực
+                                        tiếp với giảng viên, được mentor dự án portfolio cá nhân xuyên suốt lộ trình học.</p>
+                                </div>
+                            </div>
+                            <div class="card col-md-3">
+                                <img src="/theme_elearning/static/src/img/home/media.png"
+                                    class="card-img-top" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Hỗ trợ thư viện video bài giảng</h5>
+                                    <p class="card-text">Giúp bạn sở hữu trọn vẹn kiến thức dù có vắng học đột xuất.</p>
+                                </div>
+                            </div>
+                            <div class="card col-md-3">
+                                <img src="/theme_elearning/static/src/img/home/media.png"
+                                    class="card-img-top" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Học tại HCM/ Hà Nội/ Trực tuyến Zoom</h5>
+                                    <p class="card-text">Có thể học cùng lúc nhiều môn hoặc học tuần tự từng môn theo thời gian
+                                        bạn có.</p>
+                                </div>
+                            </div>
+                            <div class="card col-md-3">
+                                <img src="/theme_elearning/static/src/img/home/media.png"
+                                    class="card-img-top" alt="..."/>
+                                <div class="card-body">
+                                    <h5 class="card-title">Bảo lưu khoá học &amp; hoàn học phí
+                                    </h5>
+                                    <p class="card-text">Bảo lưu, chuyển đổi &amp; hoàn học phí một cách nhanh chóng và linh hoạt.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="course">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 text-center">
+                                <h2 class="title-course">Khóa học sắp khai giảng</h2>
+                            </div>
+                        </div>
+                        <div class="row course-list">
+                            <div class="card col-md-4">
+                                <div class="card-content">
+                                    <img src="/theme_elearning/static/src/img/home/course.jpg"
+                                        class="card-img-top" alt="..."/>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Khóa học 2D Animation &amp; Motion Graphics Basic to Intermediate
+                                        </h5>
+                                        <p class="card-text">
+                                            Ngày khai giảng: <strong>10/02/2025</strong><br/>
+                                            Trình độ: <strong>Cơ bản - Trung cấp</strong><br/>
+                                            Lịch học: <strong>Thứ 2, Thứ 6</strong><br/>
+                                            Giờ học: <strong>18:45 - 21:30</strong><br/>
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        Ưu đãi Tết, giảm ngay 15% khi đăng ký trước 15/01
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-md-4">
+                                <div class="card-content">
+                                    <img src="/theme_elearning/static/src/img/home/course.jpg"
+                                        class="card-img-top" alt="..."/>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Khoá học Photoshop Basic</h5>
+                                        <p class="card-text">
+                                            Ngày khai giảng: <strong>10/02/2025</strong><br/>
+                                            Trình độ: <strong>Cơ bản</strong><br/>
+                                            Lịch học: <strong>Thứ 2, Thứ 4</strong><br/>
+                                            Giờ học: <strong>19:00 - 21:00</strong><br/>
+                                        </p>
+                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        Ưu đãi Tết, giảm ngay 15% khi đăng ký trước 15/01
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-md-4">
+                                <div class="card-content">
+                                    <img src="/theme_elearning/static/src/img/home/course.jpg"
+                                        class="card-img-top" alt="..."/>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Khóa Học Thiết Kế UXUI Product Design</h5>
+                                        <p class="card-text">Ngày khai giảng: <strong>10/02/2025</strong><br/>
+                                            Trình độ: <strong>Cơ bản - Trung cấp</strong><br/>
+                                            Lịch học: <strong>Thứ 2, Thứ 4, Thứ 6</strong><br/>
+                                            Giờ học: <strong>19:00 - 21:30</strong><br/></p>
+                                        <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                                    </div>
+                                    <div class="card-footer">
+                                        Ưu đãi Tết, giảm ngay 15% khi đăng ký trước 15/01
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row btn-load-course">
+                            <div class="col-md-12 text-center mt-4">
+                                <button class="btn-animate"><i class="fa-solid fa-arrow-down"></i>Tải thêm các khoá học</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="gallery">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 text-center">
+                                <h3 class="title-gallery">Tác phẩm học viên</h3>
+                            </div>
+                        </div>
+                        <div class="row gallery-list">
+                            <div class="card col-lg-3 col-md-4 col-sm-6">
+                                <div class="card-content card-animate">
+                                    <span class="view"><i class="fa-regular fa-eye"></i>502</span>
+                                    <a href="">
+                                        <img src="/theme_elearning/static/src/img/home/gallary.jpg"
+                                            class="card-img-top" alt="..."/>
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Tiếng Dạ Lời Thưa</h5>
+                                        <p class="card-text">Huỳnh Thanh Danh</p>
+                                        <a href="#">Khoá học After Effects Hiệu Ứng Motion</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-lg-3 col-md-4 col-sm-6">
+                                <div class="card-content card-animate">
+                                    <span class="view"><i class="fa-regular fa-eye"></i>24</span>
+                                    <a href="">
+                                        <img src="/theme_elearning/static/src/img/home/gallary.jpg"
+                                            class="card-img-top" alt="..."/>
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fried Egg</h5>
+                                        <p class="card-text">Đỗ Anh Điệp</p>
+                                        <a href="#">Khóa học 2D Animation &amp; Motion Graphics Basic to Intermediate</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-lg-3 col-md-4 col-sm-6">
+                                <div class="card-content card-animate">
+                                    <span class="view"><i class="fa-regular fa-eye"></i>164</span>
+                                    <a href="">
+                                        <img src="/theme_elearning/static/src/img/home/gallary.jpg"
+                                            class="card-img-top" alt="..."/>
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">OSIMS</h5>
+                                        <p class="card-text">Lương Kiều Thiên</p>
+                                        <a href="#">Khóa học Web Application UX/UI Design</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card col-lg-3 col-md-4 col-sm-6">
+                                <div class="card-content card-animate">
+                                    <span class="view"><i class="fa-regular fa-eye"></i>206</span>
+                                    <a href="">
+                                        <img src="/theme_elearning/static/src/img/home/gallary.jpg"
+                                            class="card-img-top" alt="..."/>
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Guan Yin Sha Xin</h5>
+                                        <p class="card-text">Huỳnh Như Minh</p>
+                                        <a href="#">Khóa học ZBrush Character Sculpture</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row btn-load-gallery">
+                            <div class="col-md-12 text-center mt-4">
+                                <button class="btn-animate"><i class="fa-solid fa-arrow-down"></i>Tải thêm các tác phẩm</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="comment">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6 text-center">
+                                <h3 class="title-comment">Cảm nhận học viên</h3>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div class="comment-list">
+                                <div class="comment-item">
+                                    <img class="comment-avatar"
+                                        src="/theme_elearning/static/src/img/home/review.jpg"
+                                        alt=""/>
+                                    <div class="comment-content">
+                                        <div class="comment-by">
+                                            Trần Ngọc Nữ - <span>24K59L</span>
+                                        </div>
+                                        <div class="comment-course">
+                                            <a href="">Khóa học Figma UI Design</a>
+                                        </div>
+                                        <div class="comment-value">
+                                            Khóa học chất lượng, thầy Lộc siêu nhiệt tình sẵn sàng hỗ trợ học viên hết mình
+                                            trong và
+                                            sau khóa học. Rất thích cách thầy dạy học viên về tư duy logic chứ ko chỉ riêng kiến
+                                            thức cơ bản.
+                                        </div>
+                                        <div class="comment-action d-flex justify-content-end">
+                                            <span><i class="fa-regular fa-thumbs-up"></i>4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-item">
+                                    <img class="comment-avatar"
+                                        src="/theme_elearning/static/src/img/home/review.jpg"
+                                        alt=""/>
+                                    <div class="comment-content">
+                                        <div class="comment-by">
+                                            Huỳnh Sơn - <span>24K59L</span>
+                                        </div>
+                                        <div class="comment-course">
+                                            <a href="">Khóa học Figma UI Design</a>
+                                        </div>
+                                        <div class="comment-value">
+                                            Học lớp thầy Lộc môn UI figma design, thầy dạy rất đầy đủ, logic về phần kiến thức
+                                            nền tảng. Môn thiên về UI nhưng thầy cũng giảng rất nhiều về UX, cách duy đúng khi
+                                            thiết kế. Học xong các bạn có 1 nền tảng đủ để có thể học sâu hơn kiến thức khác mà
+                                            không bị sai căn bản hay mất phương hướng.
+                                        </div>
+                                        <div class="comment-action d-flex justify-content-end">
+                                            <span><i class="fa-regular fa-thumbs-up"></i>2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-item">
+                                    <img class="comment-avatar"
+                                        src="/theme_elearning/static/src/img/home/review.jpg" alt=""/>
+                                    <div class="comment-content">
+                                        <div class="comment-by">
+                                            Dương Anh Kỳ - <span>24K114CN</span>
+                                        </div>
+                                        <div class="comment-course">
+                                            <a href="">Khóa học Dựng Phim Premiere</a>
+                                        </div>
+                                        <div class="comment-value">
+                                            Mình vừa hoàn thành khoá dựng phim premier thầy Chí thầy dạy rất ok dễ hiểu hỗ trợ
+                                            hết mình mình thấy trung tâm keyframe là nơi đáng học hỏi
+                                        </div>
+                                        <div class="comment-action d-flex justify-content-between">
+                                            <a href="">
+                                                <span class="google"><i class="fa-brands fa-google"></i>Verified by
+                                                    Google</span>
+                                            </a>
+                                            <span><i class="fa-regular fa-thumbs-up"></i>4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-item">
+                                    <img class="comment-avatar"
+                                        src="/theme_elearning/static/src/img/home/review.jpg" alt=""/>
+                                    <div class="comment-content">
+                                        <div class="comment-by">
+                                            Lê Quốc Thái - <span>24K177L</span>
+                                        </div>
+                                        <div class="comment-course">
+                                            <a href="">Khoá học Photoshop Basic</a>
+                                        </div>
+                                        <div class="comment-value">
+                                            Khóa học Photoshop Basic 24K177L với giảng viên Mr Luân Nguyễn thiết thực và chu
+                                            đáo, cơ sở vật chất hiện đại, giảng viên nhiệt tình, đúng cái mình đang cần học và
+                                            hiện đã có thể thực hiện các poster quảng cáo và chỉnh sửa hình ảnh cho công việc.
+                                        </div>
+                                        <div class="comment-action d-flex justify-content-between">
+                                            <a href="">
+                                                <span class="google"><i class="fa-brands fa-google"></i>Verified by
+                                                    Google</span>
+                                            </a>
+                                            <span><i class="fa-regular fa-thumbs-up"></i>3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comment-item">
+                                    <img class="comment-avatar"
+                                        src="/theme_elearning/static/src/img/home/review.jpg" alt=""/>
+                                    <div class="comment-content">
+                                        <div class="comment-by">
+                                            Nguyễn Quỳnh Trang - <span>24RK62M - Remote</span>
+                                        </div>
+                                        <div class="comment-course">
+                                            <a href="">Khóa Học Thiết Kế UXUI Product Design</a>
+                                        </div>
+                                        <div class="comment-value">
+                                            Học lớp thầy Minh Vũ môn UXUI Product Design rất xịn xò, rất đáng để học. Mình không
+                                            nhận booking quảng cáo gì đâu :)) thề danh dự. Về chuyên môn: - Ví dụ thầy đưa ra
+                                            rất hiệu quả, mô tả được phần lý thuyết. - Plan hay, làm project ngay từ đầu khoá.
+                                            Nên học lý thuyết có cái thực hành thực tế luôn. Cuối khoá lắp ghép vào bài, đỡ mất
+                                            thời gian và hiệu quả hơn. Khiến mình hiểu được quá trình làm việc và không bị nặng.
+                                            - Nhiều lý thuyết, nhưng thầy khiến lớp tương tác với nhau nhiều hơn, nên khó buồn
+                                            ngủ lắm. Học mà hồi hộp chờ đến đoạn lớp combat nhau về một vấn đề thầy đưa ra :))
+                                            -> Mình thấy nghiệp vụ sư phạm của thầy xịn, học hiểu liền. Về giáo trình: cô đọng,
+                                            chi tiết, học hay. Về thầy: - Thầy hài hước, cười suốt. Thầy còn tư vấn cách mua 5G
+                                            giá rẻ cho học viên :)) - Học lớp thầy mà còn không dám nghỉ, sợ bỏ lỡ gì đó, đi học
+                                            để hóng chuyện thầy kể :)) - Thầy chăm lo cho đàn con thơ từng ngày, nhắc nhở làm
+                                            bài, push thật lực. Tạo điều kiện, hỗ trợ review bài ngoài giờ học. - Thầy hay
+                                            takenote mấy link bổ ích trên group lớp....so good
+                                        </div>
+                                        <div class="comment-action d-flex justify-content-end">
+                                            <span><i class="fa-regular fa-thumbs-up"></i>7</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row btn-load-comment">
+                            <div class="col-md-12 text-center mt-4">
+                                <button class="btn-animate"><i class="fa-solid fa-arrow-down"></i>Tải thêm các bình
+                                    luận</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="blogs">
+                    <div class="container">
+                        <div class="row">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6 text-center">
+                                    <h3 class="title-blog">Bài viết</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row blog-list">
+                            <div class="col-md-4">
+                                <div class="card card-animate">
+                                    <a href="">
+                                        <img src="/theme_elearning/static/src/img/home/blog.jpg"
+                                            class="card-img-top" alt="..."/>
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Review thư viện video bài học online được hỗ trợ khi học
+                                            Offline/
+                                            Remote tại Keyframe</h5>
+                                        <p class="card-text">Học tại Keyframe bạn được hỗ trợ bộ thư viện video bài học
+                                            online.
+                                            Giúp không bỏ sót bất cứ kiến thức nào dù có vắng học!</p>
+                                        <div class="catagories">
+                                            <span class="badge-blue"><a href="">Quy định học tập</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card card-animate">
+                                    <a href="">
+                                        <img src="/theme_elearning/static/src/img/home/blog.jpg"
+                                            class="card-img-top" alt="..."/>
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">16 bài UX/UI thiếu nhi dành cho người mới học</h5>
+                                        <p class="card-text">Các bài bài viết kiến thức UX/UI tiếng Việt, được biên tập và
+                                            tổng
+                                            hợp bởi Đội ngũ Keyframe cùng các Giảng viên Keyframe. Hy vọng sẽ giúp ích được
+                                            phần
+                                            nào trong những bước đầu chinh phục lĩnh vực UI/UX</p>
+                                        <div class="catagories">
+                                            <span class="badge-blue"><a href="">UI/UX</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card card-animate">
+                                    <a href="">
+                                        <img src="/theme_elearning/static/src/img/home/blog.jpg"
+                                            class="card-img-top" alt="..."/>
+                                    </a>
+                                    <div class="card-body">
+                                        <h5 class="card-title">KEYFRAME GIẢM ĐẾN 30% HỌC PHÍ các khóa học Design &amp;
+                                            Multimedia
+                                            khai giảng sau Tết Nguyên Đán 2025</h5>
+                                        <p class="card-text">KEYFRAME GIẢM ĐẾN 30% HỌC PHÍ các khóa học Design &amp; Multimedia
+                                            khai
+                                            giảng sau Tết Nguyên Đán 2025</p>
+                                        <div class="catagories">
+                                            <span class="badge-blue"><a href="">Graphic Design</a></span>
+                                            <span class="badge-yellow"><a href="">UI/UX</a></span>
+                                            <span class="badge-green"><a href="">Animation/ Motion Graphic</a></span>
+                                            <span class="badge-blue"><a href="">Digital Painiting</a></span>
+                                            <span class="badge-yellow"><a href="">Hậu Kỳ Phim</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row btn-load-blog">
+                            <div class="col-md-12 text-center mt-4">
+                                <button class="btn-animate"><i class="fa-solid fa-arrow-down"></i>Tải thêm các bài
+                                    viết</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </t>
+    </template>
+</odoo>

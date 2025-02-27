@@ -1,0 +1,399 @@
+.btn-animate,
+.thumbnail-animate,
+.card-animate {
+  transition: 0.5s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+button.navbar-toggler {
+  i {
+    color: #fff;
+  }
+}
+
+main {
+  .banner-first,
+  .banner-second,
+  .banner-third,
+  .banner-fourth {
+    margin-bottom: 26px;
+    .banner-item {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .content {
+        padding: 0 20px;
+        @media (min-width: 768px) {
+          padding: 0 100px;
+        }
+        h2 {
+          font-family: Roboto;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 52px;
+          letter-spacing: 0;
+          text-align: center;
+          color: #f0f0f0;
+          margin-bottom: 30px;
+        }
+        p {
+          font-family: Roboto;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 21px;
+          letter-spacing: 0;
+          text-align: center;
+          color: #f0f0f0;
+          margin-bottom: 30px;
+        }
+        button {
+          padding: 7px 20px;
+          font-style: normal;
+          font-weight: 700;
+          letter-spacing: 0;
+          color: #fff;
+          background: transparent;
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+          border-radius: 5px;
+          border: 1px solid #eff2f7;
+        }
+      }
+    }
+  }
+  .banner-first {
+    .banner-item {
+      background-color: #004ed3;
+    }
+  }
+  .banner-second {
+    .banner-item {
+      background-color: #993300;
+    }
+  }
+  .banner-third {
+    .banner-item {
+      background-color: #34007c;
+    }
+  }
+  .banner-fourth {
+    .banner-item {
+      background-color: #001f7b;
+    }
+  }
+}
+
+.highlight {
+  padding: 30px 0;
+  .card {
+    background-color: #edeff0;
+    border: none;
+    .card-body {
+      background-color: #edeff0;
+    }
+    .card-title {
+      text-align: center;
+      font-weight: 700;
+      color: #333;
+      font-size: 26px;
+      text-transform: unset;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      text-align: justify;
+      color: #333;
+    }
+  }
+}
+
+.title-gallery,
+.title-course,
+.title-comment,
+.title-blog {
+  margin-bottom: 15px;
+  text-transform: unset;
+  font-size: 26px;
+  color: #3e416d;
+}
+
+.course {
+  padding: 30px 0;
+  .course-list {
+    .card {
+      background-color: #edeff0;
+      border: none;
+      padding: 16px;
+      .card-content {
+        position: relative;
+        .card-body {
+          padding: 10px 20px;
+          .card-title {
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+          }
+          .card-text {
+            margin-bottom: 0;
+            color: #666;
+            strong {
+              font-weight: 600;
+            }
+          }
+        }
+        img {
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+        }
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        transition: 0.5s all linear;
+        background-color: #fff;
+        &:hover {
+          background-color: #fff;
+          box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
+          a {
+            opacity: 1;
+          }
+        }
+        a {
+          position: absolute;
+          top: 30%;
+          left: 35%;
+          opacity: 0;
+          transition: 0.5s all linear;
+          cursor: pointer;
+          background-color: #22cc9d;
+          border: none;
+        }
+        .card-footer {
+          background-color: #22cc9d;
+          color: #fff;
+          border-radius: 0 0 8px 8px;
+          line-height: 1.2;
+          font-size: 14px;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.program-gallery,
+.gallery {
+  padding: 30px 0;
+  .gallery-list {
+    .title-gallery {
+      margin-bottom: 20px;
+    }
+    .card {
+      border: none;
+      padding: 18.5px;
+      background-color: #edeff0;
+      img {
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        cursor: pointer;
+      }
+      .card-content {
+        background-color: #edeff0;
+        border-radius: 8px;
+        position: relative;
+        .view {
+          position: absolute;
+          padding: 5px;
+          border-top-left-radius: 8px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: hsla(0, 0%, 100%, 0.8);
+          font-size: 14px;
+          line-height: 1;
+          i {
+            margin-right: 4px;
+          }
+        }
+        .card-body {
+          padding: 10px;
+          .card-title {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 5px;
+          }
+          .card-text {
+            color: #666;
+            margin-bottom: 5px;
+          }
+          a {
+            color: #a3a3a3;
+            text-decoration: revert;
+            font-size: 14px;
+            transition: 0.4s all linear;
+            &:hover {
+              color: #1c536f;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-load-course,
+.btn-load-gallery,
+.btn-load-comment,
+.btn-load-blog {
+  button {
+    border: 1px solid;
+    border-radius: 6px;
+    margin: 20px;
+    line-height: 26px;
+    padding: 8px 20px;
+    position: relative;
+    display: inline-block;
+    background: #f0f0f0;
+    color: #666;
+    i {
+      margin-right: 5px;
+    }
+  }
+}
+.btn-load-gallery {
+  button {
+    margin: 0;
+  }
+}
+
+.program-comment,
+.comment {
+  padding: 30px 0;
+  .title-comment {
+    margin-bottom: 20px;
+  }
+  .comment-list {
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 16px;
+    color: #666;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    max-width: 545px;
+    .comment-item {
+      padding: 10px 0;
+      display: flex;
+      img {
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+      }
+
+      .comment-content {
+        padding-left: 10px;
+        .comment-by {
+          width: 100%;
+          font-weight: 600;
+          color: #333;
+          font-size: 16px;
+          line-height: 1.3;
+          span {
+            color: #888;
+            font-weight: 500;
+            text-align: left;
+          }
+        }
+        .comment-course {
+          a {
+            text-decoration: revert;
+            color: #a3a3a3;
+            font-size: 14px;
+            &:hover {
+              color: #1c536f;
+            }
+          }
+        }
+        .comment-value {
+          line-height: 1.6;
+          padding: 5px 0;
+          font-size: 14px;
+          color: #333;
+          margin-bottom: 0;
+        }
+        .comment-action {
+          margin-right: 20px;
+          cursor: pointer;
+          padding: 1px 6px;
+          i {
+            font-size: 18px;
+            margin-right: 4px;
+          }
+          a {
+            color: red;
+            padding: 0;
+            font-size: 14px;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.badge-blue {
+  background: #dbe9fa;
+  a {
+    color: #2f80ed;
+  }
+}
+.badge-yellow {
+  background: #fec;
+  a {
+    color: #f2994a;
+  }
+}
+.badge-green {
+  background: #d7f0e5;
+  a {
+    color: #219653;
+  }
+}
+
+.blog-list {
+  .col-md-4 {
+    padding: 15px 30px;
+    .card {
+      img {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+      border-radius: 8px;
+      .card-body {
+        padding: 20px;
+        .card-title {
+          font-size: 20px;
+          color: #333;
+          font-weight: 500;
+        }
+        .card-text {
+          color: #666;
+          line-height: 1.3;
+          margin-bottom: 15px;
+          font-weight: 400;
+        }
+        .catagories {
+          span {
+            display: inline-block;
+            padding: 3px 10px;
+            font-size: 14px;
+            border-radius: 11px;
+            margin-bottom: 5px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}

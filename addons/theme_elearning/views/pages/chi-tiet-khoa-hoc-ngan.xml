@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="product_page_template" name="Product Detail Page">
+        <t t-call="website.layout">
+            <section class="course-detail">
+                <div class="container">
+                    <nav class="detail-link" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/"><i class="fa-solid fa-house"></i></a></li>
+                            <li class="breadcrumb-item"><a href="/khoa-hoc-ngan.html">Khoá học ngắn</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><t t-esc="product.name"/></li>
+                        </ol>
+                    </nav>
+                </div>
+            </section>
+            <section class="course-title">
+                <div class="container-xsmall-615">
+                    <h1 class="text-center"><t t-esc="product.name"/></h1>
+                </div>
+            </section>
+            <section class="course-thumbnail">
+                <div class="container-xsmall-615">
+                    <img t-att-src="'/web/image/product.template/' + str(product.id) + '/image_1024'" class="img-fluid" alt=""/>
+                </div>
+            </section>
+            <section class="course-calendar">
+                <div class="container-xsmall-615">
+                    <h2 class="text-center">Lịch khai giảng</h2>
+                    <div class="location">
+                        <div class="items">
+                            <label class="item btn-animate active">
+                                <input type="radio" t-att-hidden="'true'" name="location" value="5"/>Remote Teaching
+                                <div class="tick">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </label>
+                            <label class="item ms-0 btn-animate">
+                                <input type="radio" t-att-hidden="'true'" name="location" value="3"/>TP.Hồ Chí Minh
+                                <div class="tick">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </label>
+                            <label class="item btn-animate">
+                                <input type="radio" t-att-hidden="'true'" name="location" value="4"/>Hà Nội
+                                <div class="tick">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-body">
+                            <div class="course-info">
+                                <p class="title fw-bold fs-5">Lớp: <t t-esc="product.get_class_name()"/></p>
+                                <p><i class="me-1 fa-solid fa-calendar"></i>Khai giảng ngày:<span
+                                        class="fw-bolder ms-1"><t t-esc="product.get_opening_date()"/></span></p>
+                                <p class="none-icon">Giờ học:<span class="fw-bolder ms-1"><t t-esc="product.get_study_time_label()"/></span></p>
+                                <p class="none-icon">Lịch học:<span class="fw-bolder ms-1"><t t-esc="product.get_study_days_label()"/></span></p>
+                                <p><i class="me-1 fa-solid fa-user"></i>Giảng viên:<span class="fw-bolder ms-1"><t t-esc="product.get_instructor_name()"/></span></p>
+                                <p>
+                                    <i class="me-1 fa-solid fa-book-open"></i>Thời lượng:<span class="fw-bolder ms-1"><t t-esc="product.get_duration_sessions()"/>
+                                        buổi
+                                        học
+                                    </span>
+                                </p>
+                                <p><i class="me-1 fa-solid fa-chart-simple"></i>Trình độ:<span class="fw-bolder ms-1"><t t-esc="product.get_level_label()"/></span>
+                                </p>
+                                <p><i class="me-1 fa-solid fa-dollar-sign"></i>Học phí:<span
+                                        class="sale-price fw-bolder ms-1"><t t-esc="product.get_total_price()"/><u>đ</u></span>
+                                </p>
+                                <p><i class="me-1 fa-solid fa-location-dot"></i>Địa điểm:<span class="fw-bolder ms-1">Học
+                                        trực
+                                        tuyến với
+                                        giảng viên qua Zoom/ Meet/ Classin...</span></p>
+                                <div class="course-register">
+                                    <button class="btn-register offline btn-animate">
+                                        <span class="main-text d-block">Đặt chỗ học ngay</span>
+                                        <span class="description d-block">Khai giảng ngày <t t-esc="product.get_opening_date()"/></span>
+                                    </button>
+                                    <button class="btn-register installment btn-animate">
+                                        Trả góp học phí
+                                    </button>
+                                </div>
+
+                                <p style="line-height: normal">Hỗ trợ thư viện video bài giảng. Giúp bạn sở hữu trọn vẹn
+                                    kiến
+                                    thức dù có vắng học.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="course-alert d-none">
+                        <div class="alert text-center">
+                            <div class="content">
+                                <i class="d-block fs-4 fa-solid fa-circle-info"></i>
+                                <span>
+                                    Sắp có lịch mới <br/>
+                                    Liên hệ Keyframe để được hỗ trợ <br/>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </t>
+    </template>
+</odoo>

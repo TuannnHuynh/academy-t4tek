@@ -1,0 +1,7 @@
+<odoo>
+    <template id="t4tek_elearning" inherit_id="website.snippets" name="Snippets">
+        <xpath expr="//snippets[@id='snippet_structure']" position="inside">
+            <t t-snippet="theme_elearning.s_content"  group="content" string="Content" t-thumbnail="/website/static/src/img/snippets_thumbs/s_cover.svg" />
+        </xpath>
+    </template>
+</odoo>

@@ -1,0 +1,73 @@
+.course-link {
+  padding-left: 0;
+  li {
+    a {
+      transition: 0.4s all;
+      color: #949393;
+    }
+    &:nth-child(1) {
+      &:hover {
+        a {
+          color: #3e416d;
+        }
+      }
+      &::after {
+        content: "/";
+        margin: 0 12px;
+      }
+    }
+  }
+}
+
+.list-category {
+  ul {
+    padding-left: 0;
+    li {
+      cursor: pointer;
+      border: 1px solid;
+      border-radius: 6px;
+      padding: 8px 20px;
+      background: #f0f0f0;
+      color: #666;
+    }
+  }
+}
+
+.course-filter {
+  .dropdown {
+    button {
+      min-width: 200px;
+      height: 44px;
+    }
+    .dropdown-menu {
+      li {
+        width: 200px;
+        padding: 8px 16px;
+        background: #fff;
+        cursor: pointer;
+        transition: 0.4s all;
+        a {
+          color: #666;
+          transition: 0.4s all;
+        }
+        &:hover {
+          background-color: #1967d2;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .course-filter {
+    .dropdown {
+      button {
+        margin-bottom: 8px;
+        min-width: 170px;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<odoo>
+    <record id="view_product_template_form_inherit_class_info" model="ir.ui.view">
+        <field name="name">product.template.form.inherit.class.info</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <!-- Chèn các trường ngay sau tên sản phẩm -->
+            <xpath expr="//field[@name='product_tooltip']" position="after">
+                <field name="opening_date"/>
+                <field name="level"/>
+                <field name="study_days"/>
+                <field name="study_time"/>
+                <field name="duration_sessions"/>
+                <field name="class_name"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
