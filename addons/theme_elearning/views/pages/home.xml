@@ -5,7 +5,7 @@
         <t t-call="website.layout">
             <div id="wrap" style="background: #edeff0;">
                 <section class="banner-list">
-                    <div class="container-fluid px-md-0 oe_structure">
+                    <div class="container-fluid px-0 oe_structure">
                         <div class="banner-first">
                             <div class="row m-0">
                                 <img class="col-12 col-md-6 p-0"
@@ -13,7 +13,7 @@
                                     alt=""/>
                                 <div class="banner-item col-12 py-4 py-md-0 col-md-6 p-0">
                                     <div class="content">
-                                        <h2 class="fs-1 fs-md-3">ĐỪNG BỎ LỠ ƯU ĐÃI LỚN NHẤT TRONG NĂM</h2>
+                                        <h2>ĐỪNG BỎ LỠ ƯU ĐÃI LỚN NHẤT TRONG NĂM</h2>
                                         <p>Giảm đến 30% học phí các khóa học khai giảng sau Tết Nguyên Đán. Số lượng chỗ học có
                                             hạn,
                                             thời
@@ -112,7 +112,7 @@
                     </div>
                 </section>
                 <section class="course">
-                    <div class="container">
+                    <div class="container px-md-0">
                         <div class="row justify-content-center">
                             <div class="col-md-6 text-center">
                                 <h2 class="title-course">Khóa học sắp khai giảng</h2>
@@ -396,7 +396,7 @@
                     </div>
                 </section>
                 <section class="blogs">
-                    <div class="container">
+                    <div class="container px-0">
                         <div class="row">
                             <div class="row justify-content-center">
                                 <div class="col-md-6 text-center">

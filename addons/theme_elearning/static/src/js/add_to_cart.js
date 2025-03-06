@@ -8,7 +8,6 @@ publicWidget.registry.AddToCartWidget = publicWidget.Widget.extend({
 
   start: function () {
     this._super.apply(this, arguments);
-    console.log("Widget AddToCartWidget đã được load");
   },
 
   events: {
@@ -18,7 +17,6 @@ publicWidget.registry.AddToCartWidget = publicWidget.Widget.extend({
 
   _onAddToCart: function (ev) {
     ev.preventDefault();
-    console.log("Đã click vào nút thêm vào giỏ hàng");
 
     let $btn = $(ev.currentTarget);
     let productId = $btn.closest(".course-card").data("product-id");
@@ -31,7 +29,6 @@ publicWidget.registry.AddToCartWidget = publicWidget.Widget.extend({
     rpc("/cart/add", { product_id: productId, quantity: 1 })
       .then((result) => {
         if (result.status === "success") {
-          console.log("Sản phẩm đã được thêm vào giỏ hàng");
           window.location.href = "/thanh-toan"; // Chuyển hướng ngay sang trang thanh toán
         } else {
           console.error("Lỗi khi thêm vào giỏ hàng:", result.message);

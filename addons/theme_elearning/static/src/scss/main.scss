@@ -14,7 +14,7 @@ button.navbar-toggler {
   }
 }
 
-main {
+.banner-list {
   .banner-first,
   .banner-second,
   .banner-third,
@@ -27,14 +27,10 @@ main {
       justify-content: center;
       .content {
         padding: 0 20px;
-        @media (min-width: 768px) {
-          padding: 0 100px;
-        }
         h2 {
           font-family: Roboto;
           font-style: normal;
           font-weight: 700;
-          line-height: 52px;
           letter-spacing: 0;
           text-align: center;
           color: #f0f0f0;
@@ -61,6 +57,19 @@ main {
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
           border-radius: 5px;
           border: 1px solid #eff2f7;
+        }
+        @media (min-width: 768px) {
+          padding: 20px 35px;
+          line-height: 32px;
+          h2 {
+            font-size: 26px;
+          }
+        }
+        @media (min-width: 992px) {
+          padding: 0 60px;
+          h2 {
+            font-size: 42px;
+          }
         }
       }
     }
@@ -92,6 +101,7 @@ main {
   .card {
     background-color: #edeff0;
     border: none;
+    padding: 0;
     .card-body {
       background-color: #edeff0;
     }
@@ -106,6 +116,9 @@ main {
     .card-text {
       text-align: justify;
       color: #333;
+    }
+    @media (min-width: 992px) {
+      padding: 0 12px;
     }
   }
 }
@@ -162,13 +175,15 @@ main {
         }
         a {
           position: absolute;
-          top: 30%;
-          left: 35%;
+          top: 17%;
+          left: 50%;
+          transform: translate(-50%, -17%);
           opacity: 0;
           transition: 0.5s all linear;
           cursor: pointer;
           background-color: #22cc9d;
           border: none;
+          min-width: 125px;
         }
         .card-footer {
           background-color: #22cc9d;
@@ -177,6 +192,42 @@ main {
           line-height: 1.2;
           font-size: 14px;
           border: none;
+        }
+      }
+      @media (min-width: 768px) {
+        padding: 16px 12px;
+        .card-text {
+          font-size: 14px;
+        }
+        .card-title {
+          font-size: 16px;
+        }
+        .card-footer {
+          font-size: 12px;
+        }
+      }
+      @media (min-width: 992px) {
+        padding: 16px;
+        .card-body {
+          padding: 10px 20px;
+        }
+        .card-text {
+          font-size: 16px;
+        }
+        .card-title {
+          font-size: 18px;
+        }
+        .card-footer {
+          font-size: 14px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .card-content {
+          a {
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -25%);
+          }
         }
       }
     }
@@ -394,6 +445,25 @@ main {
           }
         }
       }
+    }
+    @media (min-width: 768px) {
+      padding: 10px;
+      .card {
+        .card-body {
+          padding: 15px;
+        }
+      }
+    }
+    @media (min-width: 992px) {
+      padding: 16px;
+      .card {
+        .card-body {
+          padding: 20px;
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      padding: 15px 30px;
     }
   }
 }

@@ -11,18 +11,20 @@
                             <li>Khóa ngắn hạn</li>
                         </ul>
                         <div class="course-filter row">
-                            <div class="col-12 col-xxl-4 d-flex justify-content-around">
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2 mt-2 pe-0">
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                                         data-bs-toggle="dropdown" aria-expanded="false">
                                         Khoá ngắn hạn
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a href="">Khoá ngắn hạn</a></li>
+                                        <li><a href="khoa-hoc-ngan.html">Khoá ngắn hạn</a></li>
                                         <li><a href="">Khoá dài hạn</a></li>
                                         <li><a href="">Tất cả khoá học</a></li>
                                     </ul>
                                 </div>
+                            </div>
+                            <div class="col-12 col-sm-4 col-md-3 col-xl-2 mt-2 px-lg-0">
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -37,14 +39,14 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="list-category col-12 col-xxl-8 mt-3 mt-md-0">
+                            <div class="list-category col-12 col-xl-8">
                                 <ul class="d-flex flex-wrap">
-                                    <li class="btn-animate me-2 mt-md-0">Graphic Design</li>
-                                    <li class="btn-animate me-2 mt-md-0">3D</li>
-                                    <li class="btn-animate me-2 mt-2 mt-md-0">Motion &amp; Animation</li>
-                                    <li class="btn-animate me-2 mt-2 mt-md-0">Hậu Kỳ Phim - Video</li>
-                                    <li class="btn-animate me-2 mt-2 mt-md-0">Digital Painting</li>
-                                    <li class="btn-animate me-2 mt-2 mt-2">UI/UX</li>
+                                    <li class="btn-animate me-2 mt-2">Graphic Design</li>
+                                    <li class="btn-animate me-2 mt-2">3D</li>
+                                    <li class="btn-animate me-2 mt-2">Motion &amp; Animation</li>
+                                    <li class="btn-animate me-2 mt-2">Hậu Kỳ Phim - Video</li>
+                                    <li class="btn-animate me-2 mt-2">Digital Painting</li>
+                                    <li class="btn-animate me-2 mt-2">UI/UX</li>
                                 </ul>
                             </div>
                         </div>

@@ -9,7 +9,6 @@ publicWidget.registry.CartWidget = publicWidget.Widget.extend({
   start: function () {
     this._super.apply(this, arguments);
     this._fetchCart();
-    console.log("Widget CartWidget đã được load");
   },
 
   events: {
@@ -20,7 +19,6 @@ publicWidget.registry.CartWidget = publicWidget.Widget.extend({
   _fetchCart: function () {
     rpc("/cart/get", {}, { method: "GET" }) // Fix lỗi 405
       .then((cart) => {
-        console.log("Cart Data:", cart);
         this._renderCart(cart);
       })
       .catch((err) => {
@@ -85,8 +83,6 @@ publicWidget.registry.CartWidget = publicWidget.Widget.extend({
     rpc("/cart/remove", { product_id: productId }, { method: "POST" })
       .then((result) => {
         if (result.status === "success") {
-          console.log("Sản phẩm đã được xoá khỏi giỏ hàng.");
-
           // Gọi lại _fetchCart để cập nhật giao diện
           this._fetchCart();
         } else {

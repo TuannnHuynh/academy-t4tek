@@ -7,7 +7,7 @@
                     <nav class="detail-link" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/"><i class="fa-solid fa-house"></i></a></li>
-                            <li class="breadcrumb-item"><a href="/khoa-hoc-ngan.html">Khoá học ngắn</a></li>
+                            <li class="breadcrumb-item"><a href="/khoa-hoc-ngan">Khoá học ngắn</a></li>
                             <li class="breadcrumb-item active" aria-current="page"><t t-esc="product.name"/></li>
                         </ol>
                     </nav>
