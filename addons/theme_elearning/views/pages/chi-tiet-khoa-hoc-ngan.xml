@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="product_page_template" name="Product Detail Page">
+    <template id="product_page_template" name="Chi tiết khoá học ngắn">
         <t t-call="website.layout">
             <section class="course-detail">
                 <div class="container">
@@ -20,7 +20,7 @@
             </section>
             <section class="course-thumbnail">
                 <div class="container-xsmall-615">
-                    <img t-att-src="'/web/image/product.template/' + str(product.id) + '/image_1024'" class="img-fluid" alt=""/>
+                    <img t-att-src="'/web/image/product.template/' + str(product.id) + '/image_256' if product and product.id else '/web/static/src/img/placeholder.png'" alt=""/>
                 </div>
             </section>
             <section class="course-calendar">
@@ -48,7 +48,7 @@
                             </label>
                         </div>
                     </div>
-                    <div class="course-card">
+                    <div class="course-card" t-att-data-product-id="product.id">
                         <div class="course-body">
                             <div class="course-info">
                                 <p class="title fw-bold fs-5">Lớp: <t t-esc="product.get_class_name()"/></p>
@@ -74,11 +74,11 @@
                                         giảng viên qua Zoom/ Meet/ Classin...</span></p>
                                 <div class="course-register">
                                     <button class="btn-register offline btn-animate">
-                                        <span class="main-text d-block">Đặt chỗ học ngay</span>
-                                        <span class="description d-block">Khai giảng ngày <t t-esc="product.get_opening_date()"/></span>
+                                            <span class="main-text d-block">Đặt chỗ học ngay</span>
+                                            <span class="description d-block">Khai giảng ngày <t t-esc="product.get_opening_date()"/></span>
                                     </button>
                                     <button class="btn-register installment btn-animate">
-                                        Trả góp học phí
+                                             Trả góp học phí
                                     </button>
                                 </div>
 

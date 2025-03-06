@@ -54,7 +54,6 @@
                     </div>
                 </section>
             </div>
-            <script type="module" src="/courses/static/src/js/product_widget.js"></script>
         </t>
     </template>
 </odoo>

@@ -13,6 +13,7 @@
                 <field name="duration_sessions"/>
                 <field name="class_name"/>
             </xpath>
+            
         </field>
     </record>
 </odoo>

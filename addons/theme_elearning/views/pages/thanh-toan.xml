@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="checkout_page_template" name="Thanh toán">
+        <t t-call="website.layout">
+            <section class="checkout">
+                <div class="container-xsmall-615">
+                    <a class="go-back" href=""><i class="fa-solid fa-angle-left"></i>Xem thêm các khoá học</a>
+                    <div class="checkout-main">
+                        <div class="checkout-wrapper">
+                            <form action="">
+                               <div class="checkout-course" id="cart-container">
+                                    
+                                </div>
+
+                                <div class="receipt-detail">
+                                    <p>Số lượng: <span></span></p>
+                                    <p>Tổng đơn hàng: <span class="total-price"></span></p>
+                                </div>
+
+                                <div class="checkout-contact">
+                                    <div class="form-check">
+                                        <input type="radio" value="1" name="checkout_with" id="checkoutWithLogin"/>
+                                        <label for="checkoutWithLogin">Đăng nhập</label>
+                                    </div>
+                                    <div id="checkoutWithLoginForm" class="d-none">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" placeholder="Email hoặc số điện thoại"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="password" placeholder="Mật khẩu"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" value="2" name="checkout_with" id="checkoutWithRegister"/>
+                                        <label for="checkoutWithRegister">Đặt chỗ không cần tài khoản</label>
+                                    </div>
+                                    <div id="checkoutWithRegisterForm" class="d-none">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" placeholder="Nhập họ tên đầy đủ"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" placeholder="Email liên hệ"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" placeholder="Nhập số điện thoại"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <p style="font-style: italic; font-size: 14px"><span style="color: red">*</span>
+                                                Hệ thống sẽ tạo tài khoản mới theo thông tin trên. Đây sẽ là tài khoản
+                                                truy
+                                                cập thư viện bài giảng, theo dõi kết quả học tập của bạn.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-payment">
+                                    <p style="font-style: italic; font-size: 14px"><span style="color: red">*</span>
+                                        Hệ thống sẽ tạo tài khoản mới theo thông tin trên. Đây sẽ là tài khoản truy
+                                        cập thư viện bài giảng, theo dõi kết quả học tập của bạn.</p>
+                                    <div class="payment-method">
+                                        <div class="payment-method-item">
+                                            <div class="form-check">
+                                                <input type="radio" name="payment_method" id="id-payment-bank"/>
+                                                <label for="id-payment-bank">Thanh toán qua chuyển khoản</label>
+                                            </div>
+                                        </div>
+                                        <div class="payment-method-item">
+                                            <div class="form-check">
+                                                <input type="radio" name="payment_method" id="id-payment-office"/>
+                                                <label for="id-payment-office">Thanh toán tại trung tâm (Tiền mặt/ quẹt
+                                                    thẻ)</label>
+                                            </div>
+                                        </div>
+                                        <div class="payment-method-item">
+                                            <div class="form-check">
+                                                <input type="radio" name="payment_method" id="id-payment-installment"/>
+                                                <label for="id-payment-installment">Trả góp học phí</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="checkout-note">
+                                    <div class="form-group">
+                                        <textarea name="note" class="form-control" rows="3"
+                                            placeholder="Lời nhắn đến T4Tek"></textarea>
+                                    </div>
+                                </div>
+                                <div class="checkout-submit text-center">
+                                    <p class="note">Vui lòng kiểm tra thông tin trước khi gửi đặt chỗ</p>
+                                    <button type="submit" class="btn-reserve btn-animate">Đặt chỗ</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </t>
+    </template>
+</odoo>

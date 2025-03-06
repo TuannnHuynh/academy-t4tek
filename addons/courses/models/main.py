@@ -33,6 +33,7 @@ class ProductTemplate(models.Model):
     duration_sessions = fields.Integer(string="Số buổi học")
     class_name = fields.Char(string="Lớp học")
 
+
     def get_total_price(self):
         """Lấy giá tiền đã bao gồm thuế"""
         tax_amount = sum(self.taxes_id.mapped('amount')) / 100
