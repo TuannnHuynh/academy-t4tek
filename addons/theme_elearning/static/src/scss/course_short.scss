@@ -35,24 +35,26 @@
 
 .course-filter {
   .dropdown {
+    max-width: 180px;
     button {
       margin-bottom: 0 !important;
       height: 44px;
+      width: 100%;
     }
     .dropdown-menu {
       li {
         width: 200px;
-        padding: 8px 16px;
         background: #fff;
         cursor: pointer;
         transition: 0.4s all;
-        a {
+        button {
           color: #666;
           transition: 0.4s all;
         }
         &:hover {
           background-color: #1967d2;
-          a {
+          button {
+            background-color: #1967d2;
             color: #fff;
           }
         }

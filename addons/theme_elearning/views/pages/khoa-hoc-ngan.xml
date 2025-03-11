@@ -18,27 +18,28 @@
                                         Khoá ngắn hạn
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a href="khoa-hoc-ngan.html">Khoá ngắn hạn</a></li>
-                                        <li><a href="">Khoá dài hạn</a></li>
-                                        <li><a href="">Tất cả khoá học</a></li>
+                                        <li><button class="dropdown-item" type="button" data-value="Khoá học ngắn hạn">Khoá ngắn hạn</button></li>
+                                        <li><button class="dropdown-item" type="button" data-value="Khoá học dài hạn">Khoá dài hạn</button></li>
+                                        <li><button class="dropdown-item" type="button" data-value="Tất cả khoá học">Tất cả khoá học</button></li>
                                     </ul>
                                 </div>
                             </div>
+
                             <div class="col-12 col-sm-4 col-md-3 col-xl-2 mt-2 px-lg-0">
                                 <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                        Tất cả các địa điểm
+                                        Tất cả địa điểm
                                     </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a href="">Tất cả địa điểm</a></li>
-                                        <li><a href="">TP. Hồ Chí Minh</a></li>
-                                        <li><a href="">Hà Nội</a></li>
-                                        <li><a href="">Remote Teaching</a></li>
-                                        <li><a href="">Online Video</a></li>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                        <li><button class="dropdown-item" type="button" data-value="Tất cả địa điểm">Tất cả địa điểm</button></li>
+                                        <li><button class="dropdown-item" type="button" data-value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</button></li>
+                                        <li><button class="dropdown-item" type="button" data-value="Hà Nội">Hà Nội</button></li>
+                                        <li><button class="dropdown-item" type="button" data-value="Remote Teaching">Remote Teaching</button></li>
                                     </ul>
                                 </div>
                             </div>
+
                             <div class="list-category col-12 col-xl-8">
                                 <ul class="d-flex flex-wrap">
                                     <li class="btn-animate me-2 mt-2">Graphic Design</li>

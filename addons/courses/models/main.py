@@ -32,6 +32,24 @@ class ProductTemplate(models.Model):
 
     duration_sessions = fields.Integer(string="Số buổi học")
     class_name = fields.Char(string="Lớp học")
+    def get_variant_locations(self):
+        """Lấy danh sách địa điểm từ biến thể sản phẩm"""
+        locations = []
+        for variant in self.product_variant_ids:
+            location_values = variant.product_template_attribute_value_ids.filtered(lambda attr: attr.attribute_id.name == "Location").mapped("name")
+            if location_values:
+                locations.append(location_values[0])  # Lấy giá trị đầu tiên (nếu có nhiều)
+        return list(set(locations))  # Loại bỏ giá trị trùng lặp
+    
+    def get_courses_by_location(self, location):
+        return self.env['product.product'].search([
+            ('product_tmpl_id', '=', self.id),
+            ('attribute_value_ids.name', '=', location)
+        ])
+
+    def get_teacher_name(self):
+        teacher = self.env['res.users'].search([('id', '=', self.teacher_id.id)], limit=1)
+        return teacher.name if teacher else None
 
 
     def get_total_price(self):
@@ -39,11 +57,6 @@ class ProductTemplate(models.Model):
         tax_amount = sum(self.taxes_id.mapped('amount')) / 100
         total_price = self.list_price * (1 + tax_amount)
         return "{:,.0f}".format(total_price)
-
-
-    def get_instructor_name(self):
-        """Lấy tên giảng viên từ Tags (product.tag)"""
-        return ", ".join(self.product_tag_ids.mapped('name')) if self.product_tag_ids else "Không có giảng viên"
 
 
     def get_study_days_label(self):

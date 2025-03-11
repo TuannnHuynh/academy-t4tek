@@ -28,24 +28,15 @@
                     <h2 class="text-center">Lịch khai giảng</h2>
                     <div class="location">
                         <div class="items">
-                            <label class="item btn-animate active">
-                                <input type="radio" t-att-hidden="'true'" name="location" value="5"/>Remote Teaching
-                                <div class="tick">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                            </label>
-                            <label class="item ms-0 btn-animate">
-                                <input type="radio" t-att-hidden="'true'" name="location" value="3"/>TP.Hồ Chí Minh
-                                <div class="tick">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                            </label>
-                            <label class="item btn-animate">
-                                <input type="radio" t-att-hidden="'true'" name="location" value="4"/>Hà Nội
-                                <div class="tick">
-                                    <i class="fa-solid fa-check"></i>
-                                </div>
-                            </label>
+                            <t t-foreach="product.get_variant_locations()" t-as="location">
+                                <label class="item btn-animate">
+                                    <input type="radio" t-att-hidden="'true'" name="location" t-att-value="location"/>
+                                    <t t-esc="location"/>
+                                    <div class="tick">
+                                        <i class="fa-solid fa-check"></i>
+                                    </div>
+                                </label>
+                            </t>
                         </div>
                     </div>
                     <div class="course-card" t-att-data-product-id="product.id">
@@ -56,7 +47,7 @@
                                         class="fw-bolder ms-1"><t t-esc="product.get_opening_date()"/></span></p>
                                 <p class="none-icon">Giờ học:<span class="fw-bolder ms-1"><t t-esc="product.get_study_time_label()"/></span></p>
                                 <p class="none-icon">Lịch học:<span class="fw-bolder ms-1"><t t-esc="product.get_study_days_label()"/></span></p>
-                                <p><i class="me-1 fa-solid fa-user"></i>Giảng viên:<span class="fw-bolder ms-1"><t t-esc="product.get_instructor_name()"/></span></p>
+                                <p><i class="me-1 fa-solid fa-user"></i>Giảng viên:<span class="fw-bolder ms-1">...</span></p>
                                 <p>
                                     <i class="me-1 fa-solid fa-book-open"></i>Thời lượng:<span class="fw-bolder ms-1"><t t-esc="product.get_duration_sessions()"/>
                                         buổi
