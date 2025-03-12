@@ -21,7 +21,7 @@ class ThemeController(http.Controller):
                 "error_message": "Template không tồn tại hoặc theme đã bị thay đổi."
             })
 
-    @http.route('/khoa-hoc-ngan-han', type='http', auth="public", website=True)
+    @http.route(['/khoa-hoc-ngan-han', '/khoa-hoc-dai-han'], type='http', auth="public", website=True)
     def course_short_page(self, **kw):
         template_exists = request.env["ir.ui.view"].sudo().search([
             ("key", "=", "theme_elearning.course_short")

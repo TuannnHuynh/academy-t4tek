@@ -26,16 +26,21 @@
             <section class="course-calendar">
                 <div class="container-xsmall-615">
                     <h2 class="text-center">Lịch khai giảng</h2>
-                    <div class="location">
+                    <div class="location d-flex justify-content-center">
                         <div class="items">
+                            <t t-set="index" t-value="0"/>
                             <t t-foreach="product.get_variant_locations()" t-as="location">
-                                <label class="item btn-animate">
+                                <label class="item btn-animate" 
+                                    t-att-class="'item btn-animate' + (' active' if index == 0 else '')"
+                                    t-att-data-teacher="product.get_teacher_by_location(location)">
+                                    
                                     <input type="radio" t-att-hidden="'true'" name="location" t-att-value="location"/>
                                     <t t-esc="location"/>
                                     <div class="tick">
                                         <i class="fa-solid fa-check"></i>
                                     </div>
                                 </label>
+                                <t t-set="index" t-value="index + 1"/>
                             </t>
                         </div>
                     </div>
@@ -47,7 +52,7 @@
                                         class="fw-bolder ms-1"><t t-esc="product.get_opening_date()"/></span></p>
                                 <p class="none-icon">Giờ học:<span class="fw-bolder ms-1"><t t-esc="product.get_study_time_label()"/></span></p>
                                 <p class="none-icon">Lịch học:<span class="fw-bolder ms-1"><t t-esc="product.get_study_days_label()"/></span></p>
-                                <p><i class="me-1 fa-solid fa-user"></i>Giảng viên:<span class="fw-bolder ms-1">...</span></p>
+                                <p><i class="me-1 fa-solid fa-user"></i>Giảng viên:<span class="fw-bolder ms-1 teacher-name"><t t-esc="product.get_teacher_by_location(product.get_variant_locations()[0])"/></span></p>
                                 <p>
                                     <i class="me-1 fa-solid fa-book-open"></i>Thời lượng:<span class="fw-bolder ms-1"><t t-esc="product.get_duration_sessions()"/>
                                         buổi
@@ -59,10 +64,14 @@
                                 <p><i class="me-1 fa-solid fa-dollar-sign"></i>Học phí:<span
                                         class="sale-price fw-bolder ms-1"><t t-esc="product.get_total_price()"/><u>đ</u></span>
                                 </p>
-                                <p><i class="me-1 fa-solid fa-location-dot"></i>Địa điểm:<span class="fw-bolder ms-1">Học
-                                        trực
-                                        tuyến với
-                                        giảng viên qua Zoom/ Meet/ Classin...</span></p>
+                                <p><i class="me-1 fa-solid fa-location-dot"></i>Địa điểm:<span class="fw-bolder ms-1 location-text"><t t-set="default_location" t-value="product.get_variant_locations()[0]"/>
+                                    <t t-if="default_location == 'Remote Teaching'">
+                                        Học trực tuyến với giảng viên qua Zoom/ Meet/ Classin...
+                                    </t>
+                                    <t t-else="">
+                                        <t t-esc="default_location"/>
+                                    </t></span>
+                                </p>
                                 <div class="course-register">
                                     <button class="btn-register offline btn-animate">
                                             <span class="main-text d-block">Đặt chỗ học ngay</span>

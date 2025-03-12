@@ -13,17 +13,36 @@ let ProductListWidget = publicWidget.Widget.extend({
   selector: "#course-short-list",
 
   start: function () {
-    let defaultCategory = "Khoá học ngắn hạn";
-    this.fetchProducts(defaultCategory);
+    let path = window.location.pathname;
+    let defaultCategory = "Tất cả khoá học";
+
+    if (path.includes("/khoa-hoc-ngan-han")) {
+      defaultCategory = "Khoá ngắn hạn";
+      $("#dropdownMenuButton1").text("Khoá ngắn hạn");
+    } else if (path.includes("/khoa-hoc-dai-han")) {
+      defaultCategory = "Khoá dài hạn";
+      $("#dropdownMenuButton1").text("Khoá dài hạn");
+    }
+
+    $(".course-link li:last-child").text(defaultCategory);
+
+    let defaultLocation = "Tất cả địa điểm";
+    $("#dropdownMenuButton2").text(defaultLocation);
+
+    this.fetchProducts(defaultLocation, defaultCategory);
     this.setupDropdownEvents();
   },
 
-  fetchProducts: function (category) {
+  fetchProducts: function (location, category) {
     console.log("Gửi request RPC:", {
+      location: location || "Tất cả địa điểm",
       category_name: category || "Tất cả khoá học",
     });
 
-    rpc("/get_products", { category_name: category || "Tất cả khoá học" })
+    rpc("/get_products", {
+      location: location,
+      category_name: category,
+    })
       .then((products) => {
         console.log("Dữ liệu sản phẩm nhận được:", products);
         if (products && products.length) {
@@ -78,7 +97,8 @@ let ProductListWidget = publicWidget.Widget.extend({
 
   setupDropdownEvents: function () {
     let self = this;
-    let selectedCategory = "Tất cả khoá học";
+    let selectedCategory = $("#dropdownMenuButton1").text().trim();
+    let selectedLocation = $("#dropdownMenuButton2").text().trim();
 
     this.$el
       .closest("body")
@@ -87,7 +107,18 @@ let ProductListWidget = publicWidget.Widget.extend({
       .on("click", function () {
         selectedCategory = $(this).data("value");
         $("#dropdownMenuButton1").text($(this).text());
-        self.fetchProducts(selectedCategory);
+        self.fetchProducts(selectedLocation, selectedCategory);
+      });
+
+    // Lọc theo địa điểm
+    this.$el
+      .closest("body")
+      .find("#dropdownMenuButton2 + .dropdown-menu .dropdown-item")
+      .off("click")
+      .on("click", function () {
+        selectedLocation = $(this).data("value");
+        $("#dropdownMenuButton2").text($(this).text());
+        self.fetchProducts(selectedLocation, selectedCategory);
       });
   },
 });

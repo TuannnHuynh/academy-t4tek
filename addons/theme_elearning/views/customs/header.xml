@@ -26,7 +26,7 @@
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
                                             <li><a class="dropdown-item" href="/khoa-hoc-ngan-han">Khoá học ngắn hạn</a></li>
-                                            <li><a class="dropdown-item" href="#">Khoá học dài hạn</a></li>
+                                            <li><a class="dropdown-item" href="/khoa-hoc-dai-han">Khoá học dài hạn</a></li>
                                             <li><a class="dropdown-item" href="#">Khoá video</a></li>
                                         </ul>
                                     </li>
@@ -39,7 +39,7 @@
                                         <div class="collapse" id="coursesCollapse">
                                             <ul class="list-unstyled ps-3">
                                                 <li><a class="nav-link text-white" href="/khoa-hoc-ngan-han">Khoá học ngắn hạn</a></li>
-                                                <li><a class="nav-link text-white" href="#">Khoá học dài hạn</a></li>
+                                                <li><a class="nav-link text-white" href="/khoa-hoc-dai-han">Khoá học dài hạn</a></li>
                                                 <li><a class="nav-link text-white" href="#">Khoá video</a></li>
                                             </ul>
                                         </div>

@@ -8,18 +8,24 @@
                     <div class="container">
                         <ul class="course-link d-flex align-items-center">
                             <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
-                            <li>Khóa ngắn hạn</li>
+                            <li>
+                                <t t-set="path" t-value="request.httprequest.path" />
+                                <t t-if="'khoa-hoc-ngan-han' in path">Khoá học ngắn hạn</t>
+                                <t t-if="'khoa-hoc-dai-han' in path">Khoá học dài hạn</t>
+                            </li>
                         </ul>
                         <div class="course-filter row">
                             <div class="col-12 col-sm-4 col-md-3 col-xl-2 mt-2 pe-0">
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                        Khoá ngắn hạn
+                                        <t t-set="path" t-value="request.httprequest.path" />
+                                        <t t-if="'khoa-hoc-ngan-han' in path">Khoá ngắn hạn</t>
+                                        <t t-if="'khoa-hoc-dai-han' in path">Khoá dài hạn</t>
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><button class="dropdown-item" type="button" data-value="Khoá học ngắn hạn">Khoá ngắn hạn</button></li>
-                                        <li><button class="dropdown-item" type="button" data-value="Khoá học dài hạn">Khoá dài hạn</button></li>
+                                        <li><button class="dropdown-item" type="button" data-value="Khoá ngắn hạn">Khoá ngắn hạn</button></li>
+                                        <li><button class="dropdown-item" type="button" data-value="Khoá dài hạn">Khoá dài hạn</button></li>
                                         <li><button class="dropdown-item" type="button" data-value="Tất cả khoá học">Tất cả khoá học</button></li>
                                     </ul>
                                 </div>
@@ -33,7 +39,7 @@
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                                         <li><button class="dropdown-item" type="button" data-value="Tất cả địa điểm">Tất cả địa điểm</button></li>
-                                        <li><button class="dropdown-item" type="button" data-value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</button></li>
+                                        <li><button class="dropdown-item" type="button" data-value="Hồ Chí Minh">Hồ Chí Minh</button></li>
                                         <li><button class="dropdown-item" type="button" data-value="Hà Nội">Hà Nội</button></li>
                                         <li><button class="dropdown-item" type="button" data-value="Remote Teaching">Remote Teaching</button></li>
                                     </ul>

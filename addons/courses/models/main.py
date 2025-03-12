@@ -41,23 +41,34 @@ class ProductTemplate(models.Model):
                 locations.append(location_values[0])  # Lấy giá trị đầu tiên (nếu có nhiều)
         return list(set(locations))  # Loại bỏ giá trị trùng lặp
     
-    def get_courses_by_location(self, location):
-        return self.env['product.product'].search([
-            ('product_tmpl_id', '=', self.id),
-            ('attribute_value_ids.name', '=', location)
-        ])
+    def get_teacher_by_location(self, location_name):
+        """
+        Lấy danh sách giáo viên dựa theo địa điểm từ biến thể sản phẩm.
+        """
+        self.ensure_one()
 
-    def get_teacher_name(self):
-        teacher = self.env['res.users'].search([('id', '=', self.teacher_id.id)], limit=1)
-        return teacher.name if teacher else None
+        # Tìm biến thể có location đúng
+        variant = self.product_variant_ids.filtered(lambda v: 
+            location_name in v.product_template_attribute_value_ids.filtered(
+                lambda attr: attr.attribute_id.name == "Location"
+            ).mapped("name")
+        )
+
+        if variant:
+            # Lấy danh sách giáo viên từ biến thể này
+            teachers = variant.product_template_attribute_value_ids.filtered(
+                lambda attr: attr.attribute_id.name == "Teacher"
+            ).mapped("name")
+
+            return ", ".join(teachers) if teachers else "Chưa có giáo viên"
+
+        return "Chưa có giáo viên"
+
+
 
 
     def get_total_price(self):
-        """Lấy giá tiền đã bao gồm thuế"""
-        tax_amount = sum(self.taxes_id.mapped('amount')) / 100
-        total_price = self.list_price * (1 + tax_amount)
-        return "{:,.0f}".format(total_price)
-
+        return "{:,.0f}".format(self.list_price)
 
     def get_study_days_label(self):
         """Trả về label của 'study_days' thay vì value"""
