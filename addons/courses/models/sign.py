@@ -1,6 +1,6 @@
-from odoo import models, fields, api
-from odoo.exceptions import ValidationError
-from odoo.exceptions import AccessDenied
+from odoo import models, fields, api, _
+from odoo.exceptions import ValidationError, AccessDenied
+
 
 class ResUsers(models.Model):
     _inherit = 'res.users'
@@ -26,6 +26,7 @@ class ResUsers(models.Model):
 
     def _check_credentials(self, password, user_agent_env):
         """ Kiểm tra thông tin đăng nhập và chặn email có chữ hoa """
+        super()._check_credentials(password, user_agent_env)  # Gọi trước để tránh lỗi
         for user in self:
             if any(c.isupper() for c in user.login):
                 raise AccessDenied("Email đăng nhập không được chứa chữ in hoa!")

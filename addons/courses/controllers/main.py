@@ -55,7 +55,8 @@ class ProductController(http.Controller):
                 "study_days": dict(product._fields.get('study_days', {})._description_selection(request.env)).get(product.study_days, ''),
                 "study_time": dict(product._fields.get('study_time', {})._description_selection(request.env)).get(product.study_time, ''),
                 "location": valid_locations,  # Chỉ chứa địa điểm có giáo viên
-                "teacher": teacher_names  # Danh sách giáo viên
+                "teacher": teacher_names,  # Danh sách giáo viên
+                "promotion_text": product.promotion_text
             })
 
         return product_list

@@ -14,7 +14,9 @@ let ProductListWidget = publicWidget.Widget.extend({
 
   start: function () {
     let path = window.location.pathname;
+    let params = new URLSearchParams(window.location.search);
     let defaultCategory = "Tất cả khoá học";
+    let defaultLocation = params.get("location") || "Tất cả địa điểm";
 
     if (path.includes("/khoa-hoc-ngan-han")) {
       defaultCategory = "Khoá ngắn hạn";
@@ -26,7 +28,6 @@ let ProductListWidget = publicWidget.Widget.extend({
 
     $(".course-link li:last-child").text(defaultCategory);
 
-    let defaultLocation = "Tất cả địa điểm";
     $("#dropdownMenuButton2").text(defaultLocation);
 
     this.fetchProducts(defaultLocation, defaultCategory);
@@ -59,6 +60,7 @@ let ProductListWidget = publicWidget.Widget.extend({
 
   renderProducts: function (products) {
     let productHtml = "";
+    console.log("Dữ liệu sản phẩm nhận được:", products);
     products.forEach((product) => {
       const productSlug = createSlug(product.name);
       productHtml += `
@@ -86,7 +88,7 @@ let ProductListWidget = publicWidget.Widget.extend({
                     <a href="/khoa-hoc-ngan-han/${productSlug}" class="btn btn-primary">Xem chi tiết</a>
                 </div>
                 <div class="card-footer">
-                    Ưu đãi đặc biệt!
+                    ${product.promotion_text || "Ưu đãi đặc biệt!"}
                 </div>
             </div>
         </div>
@@ -98,7 +100,8 @@ let ProductListWidget = publicWidget.Widget.extend({
   setupDropdownEvents: function () {
     let self = this;
     let selectedCategory = $("#dropdownMenuButton1").text().trim();
-    let selectedLocation = $("#dropdownMenuButton2").text().trim();
+    let selectedLocation =
+      $("#dropdownMenuButton2").text().trim() || "Tất cả địa điểm";
 
     this.$el
       .closest("body")
@@ -107,6 +110,7 @@ let ProductListWidget = publicWidget.Widget.extend({
       .on("click", function () {
         selectedCategory = $(this).data("value");
         $("#dropdownMenuButton1").text($(this).text());
+        $(".course-link li:last-child").text(selectedCategory);
         self.fetchProducts(selectedLocation, selectedCategory);
       });
 

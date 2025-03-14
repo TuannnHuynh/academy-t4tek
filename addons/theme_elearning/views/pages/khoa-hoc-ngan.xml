@@ -12,6 +12,7 @@
                                 <t t-set="path" t-value="request.httprequest.path" />
                                 <t t-if="'khoa-hoc-ngan-han' in path">Khoá học ngắn hạn</t>
                                 <t t-if="'khoa-hoc-dai-han' in path">Khoá học dài hạn</t>
+                                <t t-if="'tat-ca-khoa-hoc' in path">Tất cả khoá học</t>
                             </li>
                         </ul>
                         <div class="course-filter row">
@@ -22,29 +23,34 @@
                                         <t t-set="path" t-value="request.httprequest.path" />
                                         <t t-if="'khoa-hoc-ngan-han' in path">Khoá ngắn hạn</t>
                                         <t t-if="'khoa-hoc-dai-han' in path">Khoá dài hạn</t>
+                                        <t t-if="'tat-ca-khoa-hoc' in path">Tất cả khoá học</t>
                                     </button>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><button class="dropdown-item" type="button" data-value="Khoá ngắn hạn">Khoá ngắn hạn</button></li>
-                                        <li><button class="dropdown-item" type="button" data-value="Khoá dài hạn">Khoá dài hạn</button></li>
-                                        <li><button class="dropdown-item" type="button" data-value="Tất cả khoá học">Tất cả khoá học</button></li>
+                                        <li><a class="dropdown-item" type="button" href="/khoa-hoc-ngan-han" data-value="Khoá ngắn hạn">Khoá ngắn hạn</a></li>
+                                        <li><a class="dropdown-item" type="button" href="/khoa-hoc-dai-han" data-value="Khoá dài hạn">Khoá dài hạn</a></li>
+                                        <li><a class="dropdown-item" type="button" href="/tat-ca-khoa-hoc" data-value="Tất cả khoá học">Tất cả khoá học</a></li>
                                     </ul>
                                 </div>
                             </div>
 
-                            <div class="col-12 col-sm-4 col-md-3 col-xl-2 mt-2 px-lg-0">
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Tất cả địa điểm
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                        <li><button class="dropdown-item" type="button" data-value="Tất cả địa điểm">Tất cả địa điểm</button></li>
-                                        <li><button class="dropdown-item" type="button" data-value="Hồ Chí Minh">Hồ Chí Minh</button></li>
-                                        <li><button class="dropdown-item" type="button" data-value="Hà Nội">Hà Nội</button></li>
-                                        <li><button class="dropdown-item" type="button" data-value="Remote Teaching">Remote Teaching</button></li>
-                                    </ul>
+                            <t t-set="path" t-value="request.httprequest.path" />
+                            <t t-if="not ('khoa-hoc-dai-han' in path or 'tat-ca-khoa-hoc' in path)">
+                                <div class="col-12 col-sm-4 col-md-3 col-xl-2 mt-2 px-lg-0">
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <t t-set="location" t-value="request.params.get('location') or 'Tất cả địa điểm'" />
+                                            <t t-esc="location"/>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                                            <li><a class="dropdown-item" type="button" data-value="Tất cả địa điểm">Tất cả địa điểm</a></li>
+                                            <li><a class="dropdown-item" type="button" data-value="Hồ Chí Minh">Hồ Chí Minh</a></li>
+                                            <li><a class="dropdown-item" type="button" data-value="Hà Nội">Hà Nội</a></li>
+                                            <li><a class="dropdown-item" type="button" data-value="Remote Teaching">Remote Teaching</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
+                            </t>
 
                             <div class="list-category col-12 col-xl-8">
                                 <ul class="d-flex flex-wrap">

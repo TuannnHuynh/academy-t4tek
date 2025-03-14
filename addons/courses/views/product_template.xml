@@ -12,8 +12,8 @@
                 <field name="study_time"/>
                 <field name="duration_sessions"/>
                 <field name="class_name"/>
+                <field name="promotion_text"/>
             </xpath>
-            
         </field>
     </record>
 </odoo>

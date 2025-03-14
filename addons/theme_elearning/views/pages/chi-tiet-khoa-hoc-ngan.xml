@@ -7,7 +7,7 @@
                     <nav class="detail-link" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="/"><i class="fa-solid fa-house"></i></a></li>
-                            <li class="breadcrumb-item"><a href="/khoa-hoc-ngan">Khoá học ngắn</a></li>
+                            <li class="breadcrumb-item"><a href="/khoa-hoc-ngan-han">Khoá học ngắn</a></li>
                             <li class="breadcrumb-item active" aria-current="page"><t t-esc="product.name"/></li>
                         </ol>
                     </nav>
@@ -59,7 +59,7 @@
                                         học
                                     </span>
                                 </p>
-                                <p><i class="me-1 fa-solid fa-chart-simple"></i>Trình độ:<span class="fw-bolder ms-1"><t t-esc="product.get_level_label()"/></span>
+                                <p><i class="me-1 fa-solid fa-chart-line"></i>Trình độ:<span class="fw-bolder ms-1"><t t-esc="product.get_level_label()"/></span>
                                 </p>
                                 <p><i class="me-1 fa-solid fa-dollar-sign"></i>Học phí:<span
                                         class="sale-price fw-bolder ms-1"><t t-esc="product.get_total_price()"/><u>đ</u></span>

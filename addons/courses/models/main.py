@@ -32,6 +32,13 @@ class ProductTemplate(models.Model):
 
     duration_sessions = fields.Integer(string="Số buổi học")
     class_name = fields.Char(string="Lớp học")
+
+    promotion_text = fields.Char(string="Ưu đãi")
+
+    def get_promotion_text(self):
+        """Lấy nội dung ưu đãi để hiển thị trên giao diện"""
+        return self.promotion_text if self.promotion_text else "Ưu đãi đặc biệt!"
+    
     def get_variant_locations(self):
         """Lấy danh sách địa điểm từ biến thể sản phẩm"""
         locations = []

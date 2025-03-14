@@ -1,106 +1,101 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <data noupdate="1">
-        <template id="custom_theme_header" inherit_id="website.layout" name="Custom Theme Header">
-            <xpath expr="//header" position="replace">
-                    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-                <header style="z-index: 9999">
-                    <nav class="navbar navbar-expand-lg navbar-light py-3" style="background-color: #2a2d34;">
-                        <div class="container ps-2 pe-2">
-                            <a class="navbar-brand" style="color:#fff;" href="/">T4Tek</a>
-                            <button class="navbar-toggler" type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#navbarSupportedContent"
-                                    aria-controls="navbarSupportedContent"
-                                    aria-expanded="false"   
-                                    aria-label="Toggle navigation">
-                                <span style="color:#fff;" class="fa fa-bars"></span>
-                            </button>
-                            
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav mx-auto">
-                                    <!-- Dropdown cho màn hình lớn (md trở lên) -->
-                                    <li class="nav-item dropdown d-none d-md-block">
-                                        <a class="nav-link text-white dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Các khoá học
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
-                                            <li><a class="dropdown-item" href="/khoa-hoc-ngan-han">Khoá học ngắn hạn</a></li>
-                                            <li><a class="dropdown-item" href="/khoa-hoc-dai-han">Khoá học dài hạn</a></li>
-                                            <li><a class="dropdown-item" href="#">Khoá video</a></li>
-                                        </ul>
-                                    </li>
+    <template id="custom_theme_header" inherit_id="website.layout" name="Custom Theme Header">
+        <xpath expr="//header" position="replace">
+            <header style="z-index: 9999">
+                <nav class="navbar navbar-expand-lg navbar-light py-3" style="background-color: #2a2d34;">
+                    <div class="container ps-2 pe-2">
+                        <a class="navbar-brand" style="color:#fff;" href="/">T4Tek</a>
+                        <button class="navbar-toggler" type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent"
+                                aria-controls="navbarSupportedContent"
+                                aria-expanded="false"   
+                                aria-label="Toggle navigation">
+                            <span style="color:#fff;" class="fa fa-bars"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto">
+                                <!-- Dropdown cho màn hình lớn (md trở lên) -->
+                                <li class="nav-item dropdown d-none d-md-block">
+                                    <a class="nav-link text-white dropdown-toggle" href="#" id="coursesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Các khoá học
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="coursesDropdown">
+                                        <li><a class="dropdown-item" href="/khoa-hoc-ngan-han">Khoá học ngắn hạn</a></li>
+                                        <li><a class="dropdown-item" href="/khoa-hoc-dai-han">Khoá học dài hạn</a></li>
+                                        <li><a class="dropdown-item" href="#">Khoá video</a></li>
+                                    </ul>
+                                </li>
                                     
                                     <!-- Collapse cho màn hình nhỏ (sm) -->
-                                    <li class="nav-item d-md-none">
-                                        <a class="nav-link text-white dropdown-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#coursesCollapse">
-                                            Các khoá học
-                                        </a>
-                                        <div class="collapse" id="coursesCollapse">
-                                            <ul class="list-unstyled ps-3">
-                                                <li><a class="nav-link text-white" href="/khoa-hoc-ngan-han">Khoá học ngắn hạn</a></li>
-                                                <li><a class="nav-link text-white" href="/khoa-hoc-dai-han">Khoá học dài hạn</a></li>
-                                                <li><a class="nav-link text-white" href="#">Khoá video</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
+                                <li class="nav-item d-md-none">
+                                    <a class="nav-link text-white dropdown-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#coursesCollapse">
+                                        Các khoá học
+                                    </a>
+                                    <div class="collapse" id="coursesCollapse">
+                                        <ul class="list-unstyled ps-3">
+                                            <li><a class="nav-link text-white" href="/khoa-hoc-ngan-han">Khoá học ngắn hạn</a></li>
+                                            <li><a class="nav-link text-white" href="/khoa-hoc-dai-han">Khoá học dài hạn</a></li>
+                                            <li><a class="nav-link text-white" href="#">Khoá video</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
                                     
                                     <!-- Dropdown cho Địa điểm (md trở lên) -->
-                                    <li class="nav-item dropdown d-none d-md-block">
-                                        <a class="nav-link text-white dropdown-toggle" href="#" id="locationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            Địa điểm học
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="locationsDropdown">
-                                            <li><a class="dropdown-item" href="#">Hà Nội</a></li>
-                                            <li><a class="dropdown-item" href="#">TP. Hồ Chí Minh</a></li>
-                                            <li><a class="dropdown-item" href="#">Remote Teaching</a></li>
+                                <li class="nav-item dropdown d-none d-md-block">
+                                    <a class="nav-link text-white dropdown-toggle" href="#" id="locationsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Địa điểm học
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="locationsDropdown">
+                                        <li><a class="dropdown-item" href="/khoa-hoc-ngan-han?location=Hà Nội">Hà Nội</a></li>
+                                        <li><a class="dropdown-item" href="/khoa-hoc-ngan-han?location=Hồ Chí Minh">TP. Hồ Chí Minh</a></li>
+                                        <li><a class="dropdown-item" href="/khoa-hoc-ngan-han?location=Remote Teaching">Remote Teaching</a></li>
+                                    </ul>
+                                </li>
+                                    
+                                <!-- Collapse cho màn hình nhỏ (sm) -->
+                                <li class="nav-item d-md-none">
+                                    <a class="nav-link text-white dropdown-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#locationsCollapse">
+                                        Địa điểm học
+                                    </a>
+                                    <div class="collapse" id="locationsCollapse">
+                                        <ul class="list-unstyled ps-3">
+                                            <li><a class="nav-link text-white" href="/khoa-hoc-ngan-han?location=Hà Nội">Hà Nội</a></li>
+                                            <li><a class="nav-link text-white" href="/khoa-hoc-ngan-han?location=Hồ Chí Minh">TP. Hồ Chí Minh</a></li>
+                                            <li><a class="nav-link text-white" href="/khoa-hoc-ngan-han?location=Remote Teaching">Remote Teaching</a></li>
                                         </ul>
-                                    </li>
+                                    </div>
+                                </li>
                                     
-                                    <!-- Collapse cho màn hình nhỏ (sm) -->
-                                    <li class="nav-item d-md-none">
-                                        <a class="nav-link text-white dropdown-toggle" href="#" data-bs-toggle="collapse" data-bs-target="#locationsCollapse">
-                                            Địa điểm học
-                                        </a>
-                                        <div class="collapse" id="locationsCollapse">
-                                            <ul class="list-unstyled ps-3">
-                                                <li><a class="nav-link text-white" href="#">Hà Nội</a></li>
-                                                <li><a class="nav-link text-white" href="#">TP. Hồ Chí Minh</a></li>
-                                                <li><a class="nav-link text-white" href="#">Remote Teaching</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    
-                                    <li class="nav-item">
-                                        <a class="nav-link text-white" href="/blog">Bài viết</a>
-                                    </li>
-                                </ul>
+                                <li class="nav-item">
+                                    <a class="nav-link text-white" href="/blog">Bài viết</a>
+                                </li>
+                            </ul>
                                 
-                                <!-- Cart Icon -->
-                                <a href="/shop/cart" style="margin-right: 6px; padding: 6px;" class="text-white">
-                                    <span style="font-size: 17px;"><i class="fa-solid fa-cart-shopping"></i></span>
-                                </a>
+                            <!-- Cart Icon -->
+                            <a href="/shop/cart" style="margin-right: 6px; padding: 6px;" class="text-white">
+                                <span style="font-size: 17px;"><i class="fa-solid fa-cart-shopping"></i></span>
+                            </a>
                                 
-                                <div class="nav navbar-nav ml-auto">
-                                    <!-- Sign In -->
-                                    <t t-call="portal.placeholder_user_sign_in">
-                                        <t t-set="_item_class" t-value="'nav-item ml-lg-3'"/>
-                                        <t t-set="_link_class" t-value="'nav-link font-weight-bold text-white'"/>
-                                    </t>
+                            <div class="nav navbar-nav ml-auto">
+                                <!-- Sign In -->
+                                <t t-call="portal.placeholder_user_sign_in">
+                                    <t t-set="_item_class" t-value="'nav-item ml-lg-3'"/>
+                                    <t t-set="_link_class" t-value="'nav-link font-weight-bold text-white'"/>
+                                </t>
                                     
-                                    <!-- User Dropdown -->
-                                    <t t-call="portal.user_dropdown">
-                                        <t t-set="_user_name" t-value="True"/>
-                                        <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-3'"/>
-                                        <t t-set="_link_class" t-value="'nav-link font-weight-bold text-white'"/>
-                                    </t>
-                                </div>
-
+                                <!-- User Dropdown -->
+                                <t t-call="portal.user_dropdown">
+                                    <t t-set="_user_name" t-value="True"/>
+                                    <t t-set="_item_class" t-value="'nav-item dropdown ml-lg-3'"/>
+                                    <t t-set="_link_class" t-value="'nav-link font-weight-bold text-white'"/>
+                                </t>
                             </div>
                         </div>
-                    </nav>
-                </header>
-            </xpath>
-        </template>
-   </data>
+                    </div>
+                </nav>
+            </header>
+        </xpath>
+    </template>
 </odoo>
