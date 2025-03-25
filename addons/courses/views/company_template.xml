@@ -1,0 +1,30 @@
+<odoo>
+    <record id="view_company_form_banner" model="ir.ui.view">
+        <field name="name">res.company.form.banner</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='currency_id']" position="after">
+                <separator string="First Banner"/>
+                <field name="x_banner_title_1" />
+                <field name="x_banner_content_1"/>
+                <field name="x_banner_image_1" widget="image" style="max-width: 150px; max-height: 150px;"/>
+
+                <separator string="Second Banner"/>
+                <field name="x_banner_title_2"/>
+                <field name="x_banner_content_2"/>
+                <field name="x_banner_image_2" widget="image" style="max-width: 150px; max-height: 150px;"/>
+
+                <separator string="Third Banner"/>
+                <field name="x_banner_title_3"/>
+                <field name="x_banner_content_3"/>
+                <field name="x_banner_image_3" widget="image" style="max-width: 150px; max-height: 150px;"/>
+
+                <separator string="Fourth Banner"/>
+                <field name="x_banner_title_4"/>
+                <field name="x_banner_content_4"/>
+                <field name="x_banner_image_4" widget="image" style="max-width: 150px; max-height: 150px;"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

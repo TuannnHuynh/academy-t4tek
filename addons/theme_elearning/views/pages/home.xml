@@ -6,67 +6,71 @@
             <div id="wrap" style="background: #edeff0;">
                 <section class="banner-list">
                     <div class="container-fluid px-0 oe_structure">
-                        <div class="banner-first">
-                            <div class="row m-0">
-                                <img class="col-12 col-md-6 p-0"
-                                    src="/theme_elearning/static/src/img/home/banner.png"
-                                    alt=""/>
-                                <div class="banner-item col-12 py-4 py-md-0 col-md-6 p-0">
-                                    <div class="content">
-                                        <h2>ĐỪNG BỎ LỠ ƯU ĐÃI LỚN NHẤT TRONG NĂM</h2>
-                                        <p>Giảm đến 30% học phí các khóa học khai giảng sau Tết Nguyên Đán. Số lượng chỗ học có
-                                            hạn,
-                                            thời
-                                            gian ưu đãi đến 15/1/2025 hoặc khi khóa học nhận đủ học viên tùy theo điều kiện nào
-                                            đến
-                                            trước.
-                                        </p>
-                                        <button class="btn-animate">Chọn khoá học phù hợp</button>
+                        <t t-set="company" t-value="request.env.company"/>
+                        <t t-if="company.x_banner_image_1">
+                            <div class="banner-first">
+                                <div class="row m-0">
+                                    <img class="col-12 col-md-6 p-0" 
+                                         t-att-src="'data:image/png;base64,' + company.x_banner_image_1.decode()" 
+                                         alt=""/>
+                                    <div class="banner-item col-12 py-4 py-md-0 col-md-6 p-0">
+                                        <div class="content">
+                                            <h2 t-esc="company.x_banner_title_1"/>
+                                            <p t-esc="company.x_banner_content_1"/>
+                                            <button class="btn-animate">Chọn khoá học phù hợp</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="banner-second">
-                            <div class="row m-0">
-                                <img class="col-12 col-md-6 p-0"
-                                    src="/theme_elearning/static/src/img/home/banner-1.jpg"
-                                    alt=""/>
-                                <div class="banner-item col-12 py-4 py-md-0 col-md-6 p-0">
-                                    <div class="content">
-                                        <h2>Lộ trình học Mỹ Thuật Số - Dành cho trẻ em từ 8 - 17 tuổi</h2>
-                                        <button class="btn-animate">Xem chi tiết</button>
+                        </t>
+                        <t t-if="company.x_banner_image_2">
+                            <div class="banner-second">
+                                <div class="row m-0">
+                                    <img class="col-12 col-md-6 p-0" 
+                                         t-att-src="'data:image/png;base64,' + company.x_banner_image_2.decode()" 
+                                         alt=""/>
+                                    <div class="banner-item col-12 py-4 py-md-0 col-md-6 p-0">
+                                        <div class="content">
+                                            <h2 t-esc="company.x_banner_title_2"/>
+                                            <p t-esc="company.x_banner_content_1"/>
+                                            <button class="btn-animate">Xem chi tiết</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="banner-third">
-                            <div class="row m-0">
-                                <img class="col-12 col-md-6 p-0"
-                                    src="/theme_elearning/static/src/img/home/banner-2.jpg"
-                                    alt=""/>
-                                <div class="banner-item col-12 py-4 py-md-0 col-md-6 p-0">
-                                    <div class="content">
-                                        <h2>Trở thành UX/UI Designer toàn diện tư duy và kỹ năng thiết kế</h2>
-                                        <p>Học Offline tại Sài Gòn/ Hà Nội hoặc Remote Teaching với giảng viên qua Meet</p>
-                                        <button class="btn-animate">Xem chi tiết</button>
+                        </t>
+                        <t t-if="company.x_banner_image_3">
+                            <div class="banner-third">
+                                <div class="row m-0">
+                                    <img class="col-12 col-md-6 p-0" 
+                                         t-att-src="'data:image/png;base64,' + company.x_banner_image_3.decode()" 
+                                         alt=""/>
+                                    <div class="banner-item col-12 py-4 py-md-0 col-md-6 p-0">
+                                        <div class="content">
+                                            <h2 t-esc="company.x_banner_title_3"/>
+                                            <p t-esc="company.x_banner_content_3"/>
+                                            <button class="btn-animate">Xem chi tiết</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="banner-fourth">
-                            <div class="row m-0">
-                                <img class="col-12 col-md-6 p-0"
-                                    src="/theme_elearning/static/src/img/home/banner-3.jpg"
-                                    alt=""/>
-                                <div class="banner-item col-12 py-4 py-md-0 col-md-6 p-0">
-                                    <div class="content">
-                                        <h2>Trở thành Graphic Designer Toàn Diện</h2>
-                                        <p>Từ Tư Duy Hình Ảnh, Mỹ Thuật Sáng Tạo đến Thiết Kế Chuyên Sâu.</p>
-                                        <button class="btn-animate">Xem chi tiết chương trình học</button>
+                        </t>
+                        <t t-if="company.x_banner_image_4">
+                            <div class="banner-fourth">
+                                <div class="row m-0">
+                                    <img class="col-12 col-md-6 p-0" 
+                                         t-att-src="'data:image/png;base64,' + company.x_banner_image_4.decode()" 
+                                         alt=""/>
+                                    <div class="banner-item col-12 py-4 py-md-0 col-md-6 p-0">
+                                        <div class="content">
+                                            <h2 t-esc="company.x_banner_title_4"/>
+                                            <p t-esc="company.x_banner_content_4"/>
+                                            <button class="btn-animate">Xem chi tiết chương trình học</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </t>
                     </div>
                 </section>
                 <section class="highlight">

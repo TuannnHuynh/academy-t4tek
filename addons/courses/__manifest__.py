@@ -13,6 +13,7 @@
         'security/product_template_security.xml',
         'security/cart_order_security.xml',
         'views/product_template.xml',
+        'views/company_template.xml',
     ],
     'installable': True,
     'auto_install': False,
